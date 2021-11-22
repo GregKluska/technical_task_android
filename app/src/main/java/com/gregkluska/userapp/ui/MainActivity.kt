@@ -1,12 +1,11 @@
 package com.gregkluska.userapp.ui
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
-import androidx.compose.material.Button
-import androidx.compose.material.Text
+import androidx.compose.material.rememberScaffoldState
+import com.gregkluska.userapp.ui.theme.AppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -18,11 +17,14 @@ class MainActivity: ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            Text("Hello World!")
-            Button(onClick = { viewModel.hashCode() }) {
-                Text("aa")
+            val scaffoldState = rememberScaffoldState()
+            
+            AppTheme(
+                progressBarState = viewModel.state.value.progressBarState,
+                scaffoldState = scaffoldState
+            ) {
+                UserList(users = viewModel.state.value.users)
             }
-            viewModel.getUserss()
         }
     }
 }

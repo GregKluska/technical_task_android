@@ -13,14 +13,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7db33401-cb5a-483e-9a2f-833cddb0254f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/UserListEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/UserListState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/components/CircularIndeterminateProgressBar.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/components/GenericDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/theme/Color.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/theme/Shape.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/theme/Theme.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/theme/Type.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/MainViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/NetworkDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/NetworkDataSource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/UserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/UserService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/components/UserList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/UserList.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/state/UIComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/state/UIComponent.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +57,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Interface" />
-        <option value="Kotlin File" />
         <option value="Kotlin Object" />
+        <option value="Kotlin File" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -77,6 +85,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/theme" />
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -87,11 +96,20 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/theme" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui" />
+    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="com.gregkluska.userapp.ui" />
       <recent name="com.gregkluska.domain.state" />
       <recent name="com.gregkluska.datasource.util" />
       <recent name="com.gregkluska.datasource" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.gregkluska.userapp.ui" />
     </key>
   </component>
   <component name="RunManager">
@@ -189,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637616683773</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add response object to retrofit response">
+      <created>1637620440465</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1637620440465</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,6 +233,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Add datasource, domain and interactors" />
     <MESSAGE value="Add Jetpack Compose to the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Jetpack Compose to the project" />
+    <MESSAGE value="Add response object to retrofit response" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add response object to retrofit response" />
   </component>
 </project>
