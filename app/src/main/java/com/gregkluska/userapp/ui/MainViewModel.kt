@@ -1,6 +1,5 @@
 package com.gregkluska.userapp.ui
 
-import android.util.Log
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
@@ -8,8 +7,9 @@ import androidx.lifecycle.viewModelScope
 import com.gregkluska.domain.interactors.GetUsers
 import com.gregkluska.domain.state.DataState
 import com.gregkluska.domain.state.UIComponent
+import com.gregkluska.userapp.ui.userlist.UserListEvent
+import com.gregkluska.userapp.ui.userlist.UserListState
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import java.util.*

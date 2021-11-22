@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.material.rememberScaffoldState
 import com.gregkluska.userapp.ui.theme.AppTheme
+import com.gregkluska.userapp.ui.userlist.UserList
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -21,9 +22,12 @@ class MainActivity: ComponentActivity() {
             
             AppTheme(
                 progressBarState = viewModel.state.value.progressBarState,
-                scaffoldState = scaffoldState
             ) {
-                UserList(users = viewModel.state.value.users)
+                UserList(
+                    users = viewModel.state.value.users,
+                    event = viewModel::onTriggerEvent,
+                    scaffoldState = scaffoldState
+                )
             }
         }
     }

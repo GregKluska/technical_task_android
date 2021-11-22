@@ -1,4 +1,4 @@
-package com.gregkluska.userapp.ui
+package com.gregkluska.userapp.ui.userlist
 
 sealed class UserListEvent {
 

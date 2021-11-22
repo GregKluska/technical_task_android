@@ -1,4 +1,4 @@
-package com.gregkluska.userapp.ui
+package com.gregkluska.userapp.ui.userlist
 
 import com.gregkluska.domain.model.User
 import com.gregkluska.domain.state.ProgressBarState

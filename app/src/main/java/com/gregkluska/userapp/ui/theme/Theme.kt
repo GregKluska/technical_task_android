@@ -9,7 +9,10 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.gregkluska.domain.state.ProgressBarState
+import com.gregkluska.userapp.R
 import com.gregkluska.userapp.ui.components.CircularIndeterminateProgressBar
 import com.gregkluska.userapp.ui.components.GenericDialog
 import com.gregkluska.userapp.ui.components.GenericDialogInfo
@@ -40,7 +43,6 @@ private val LightColorPalette = lightColors(
 fun AppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     progressBarState: ProgressBarState,
-    scaffoldState: ScaffoldState,
     dialogQueue: Queue<GenericDialogInfo>? = null,
     content: @Composable () -> Unit,
 ) {
@@ -55,11 +57,6 @@ fun AppTheme(
                 .background(color = MaterialTheme.colors.background)
         ) {
             Column {
-                Scaffold(
-
-                ) {
-
-                }
                 content()
             }
 
