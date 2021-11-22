@@ -10,33 +10,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7db33401-cb5a-483e-9a2f-833cddb0254f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/datasource/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasource/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasource/consumer-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasource/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasource/src/androidTest/java/com/gregkluska/datasource/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasource/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasource/src/test/java/com/gregkluska/datasource/ExampleUnitTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/MyClass.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interactors/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interactors/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interactors/src/main/java/com/gregkluska/interactors/MyClass.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-userAdd/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-userAdd/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-userAdd/consumer-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-userAdd/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-userAdd/src/androidTest/java/com/gregkluska/ui_useradd/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-userAdd/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-userAdd/src/test/java/com/gregkluska/ui_useradd/ExampleUnitTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-userList/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-userList/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-userList/consumer-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-userList/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-userList/src/androidTest/java/com/gregkluska/ui_userlist/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-userList/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui-userList/src/test/java/com/gregkluska/ui_userlist/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/ui-userAdd/User_App.ui-userAdd.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/ui-userList/User_App.ui-userList.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/BaseApplication.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/di/AppModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/di/InteractorsModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/NetworkDataSource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/UserService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/model/Meta.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/model/Pagination.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/model/UserDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/util/GenericResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/ResponseException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/interactors/AddUser.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/interactors/DeleteUser.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/interactors/GetUsers.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/model/User.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/state/DataState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/state/ProgressBarState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/state/UIComponent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasource/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/datasource/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/domain/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/MyClass.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/INetworkDataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-userAdd/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-userAdd/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-userAdd/consumer-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-userAdd/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-userAdd/src/androidTest/java/com/gregkluska/ui_useradd/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-userAdd/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-userAdd/src/test/java/com/gregkluska/ui_useradd/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-userList/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-userList/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-userList/consumer-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-userList/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-userList/src/androidTest/java/com/gregkluska/ui_userlist/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-userList/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-userList/src/test/java/com/gregkluska/ui_userlist/ExampleUnitTest.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,9 +79,27 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Interface" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin Object" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="21H6Ms43gsdWxSHcMhDbGaZvKVy" />
   <component name="ProjectViewState">
@@ -73,6 +109,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
@@ -82,6 +119,13 @@
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Properties" />
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.gregkluska.domain.state" />
+      <recent name="com.gregkluska.datasource.util" />
+      <recent name="com.gregkluska.datasource" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -157,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637586988830</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1637590679136</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637590679136</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
