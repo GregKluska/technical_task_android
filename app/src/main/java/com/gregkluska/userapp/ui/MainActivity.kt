@@ -5,6 +5,7 @@ import android.os.PersistableBundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.compose.material.Button
 import androidx.compose.material.Text
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -15,8 +16,13 @@ class MainActivity: ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
             Text("Hello World!")
+            Button(onClick = { viewModel.hashCode() }) {
+                Text("aa")
+            }
+            viewModel.getUserss()
         }
     }
 }

@@ -11,13 +11,14 @@ class NetworkDataSource(
 
     override suspend fun getUsers(): List<User> {
         // get page count
-        val response = userService.getUsers(1)
-        val pageCount = response.meta?.pagination?.pages
+        val pageCount = userService.getUsers().body()?.meta?.pagination?.pages ?: 1
 
         // get last page
-        val lastPage = userService.getUsers(pageCount ?: 1)
+        val lastPage = userService.getUsers(pageCount)
 
-        return lastPage.data.map { it.toUser() }
+        val response = lastPage.body()?.data?.map { it.toUser() }
+
+        return response ?: listOf()
     }
 
     override suspend fun addUser(user: User) {
@@ -27,6 +28,8 @@ class NetworkDataSource(
             gender = user.gender,
             status = user.status
         )
+
+
     }
 
     override suspend fun deleteUser(id: Long) {
