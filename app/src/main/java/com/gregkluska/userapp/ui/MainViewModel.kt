@@ -39,6 +39,7 @@ constructor(
             UserListEvent.GetUsers -> getUsers()
             UserListEvent.OpenModal -> TODO()
             UserListEvent.OnRemoveHeadFromQueue -> removeHeadMessage()
+            is UserListEvent.LongPress -> TODO()
         }
     }
 

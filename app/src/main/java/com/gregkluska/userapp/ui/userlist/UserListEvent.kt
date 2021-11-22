@@ -6,6 +6,8 @@ sealed class UserListEvent {
 
     object OpenModal: UserListEvent()
 
+    data class LongPress(val id: Long): UserListEvent()
+
     data class DeleteUser(val id: Long): UserListEvent()
 
     data class AddUser(val id: Long): UserListEvent()

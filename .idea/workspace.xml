@@ -12,17 +12,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7db33401-cb5a-483e-9a2f-833cddb0254f" name="Default Changelist" comment="Add UI, state, events and other MVI things">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/components/ScreenUI.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/MainActivity.kt" afterDir="false" />
+    <list default="true" id="7db33401-cb5a-483e-9a2f-833cddb0254f" name="Default Changelist" comment="Add scaffold, topbar">
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/MainViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/UserList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/userlist/UserList.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/UserListEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/userlist/UserListEvent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/UserListState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/userlist/UserListState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/theme/Theme.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/theme/Theme.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/userlist/UserList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/userlist/UserList.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/userlist/UserListEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/userlist/UserListEvent.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637624207809</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add scaffold, topbar">
+      <created>1637624857744</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1637624857744</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,6 +237,7 @@
     <MESSAGE value="Add Jetpack Compose to the project" />
     <MESSAGE value="Add response object to retrofit response" />
     <MESSAGE value="Add UI, state, events and other MVI things" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add UI, state, events and other MVI things" />
+    <MESSAGE value="Add scaffold, topbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add scaffold, topbar" />
   </component>
 </project>
