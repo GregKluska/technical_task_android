@@ -12,7 +12,7 @@ interface UserService {
     suspend fun getUsers(@Query(value = "page") page: Int? = null): Response<GenericResponse<List<UserDto>>>
 
     @DELETE("users/{id}")
-    suspend fun deleteUser(@Path("id") id: Long)
+    suspend fun deleteUser(@Path("id") id: Long): Response<String>
 
     @FormUrlEncoded
     @POST("users")
@@ -21,6 +21,6 @@ interface UserService {
         @Field("email") email: String,
         @Field("gender") gender: String,
         @Field("status") status: String
-    ): GenericResponse<UserDto>
+    ): Response<GenericResponse<UserDto>>
 
 }

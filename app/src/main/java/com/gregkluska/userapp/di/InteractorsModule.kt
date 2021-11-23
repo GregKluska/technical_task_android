@@ -1,6 +1,8 @@
 package com.gregkluska.userapp.di
 
 import com.gregkluska.domain.INetworkDataSource
+import com.gregkluska.domain.interactors.AddUser
+import com.gregkluska.domain.interactors.DeleteUser
 import com.gregkluska.domain.interactors.GetUsers
 import dagger.Module
 import dagger.Provides
@@ -18,5 +20,21 @@ object InteractorsModule {
         networkDataSource: INetworkDataSource
     ): GetUsers {
         return GetUsers(networkDataSource = networkDataSource)
+    }
+
+    @ViewModelScoped
+    @Provides
+    fun provideAddUser(
+        networkDataSource: INetworkDataSource
+    ): AddUser {
+        return AddUser(networkDataSource = networkDataSource)
+    }
+
+    @ViewModelScoped
+    @Provides
+    fun provideDeleteUser(
+        networkDataSource: INetworkDataSource
+    ): DeleteUser {
+        return DeleteUser(networkDataSource = networkDataSource)
     }
 }

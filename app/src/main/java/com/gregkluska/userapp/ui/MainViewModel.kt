@@ -4,7 +4,10 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.gregkluska.domain.interactors.AddUser
+import com.gregkluska.domain.interactors.DeleteUser
 import com.gregkluska.domain.interactors.GetUsers
+import com.gregkluska.domain.model.User
 import com.gregkluska.domain.state.DataState
 import com.gregkluska.domain.state.UIComponent
 import com.gregkluska.userapp.ui.userlist.UserListEvent
@@ -19,7 +22,9 @@ import javax.inject.Inject
 class MainViewModel
 @Inject
 constructor(
-    private val getUsers: GetUsers
+    private val getUsers: GetUsers,
+    private val addUser: AddUser,
+    private val deleteUser: DeleteUser
 ) : ViewModel(){
 
     companion object {
@@ -34,7 +39,7 @@ constructor(
 
     fun onTriggerEvent(event: UserListEvent) {
         when(event) {
-            is UserListEvent.AddUser -> TODO()
+            is UserListEvent.AddUser -> addUser(event.name, event.email, event.gender)
             is UserListEvent.DeleteUser -> deleteUser(event.id)
             UserListEvent.GetUsers -> getUsers()
             UserListEvent.OpenModal -> showModal(true)
@@ -44,19 +49,48 @@ constructor(
         }
     }
 
+    private fun addUser(name: String, email: String, gender: String) {
+        addUser.execute(
+            name = name,
+            email = email,
+            gender = gender
+        ).onEach { dataState ->
+            when(dataState) {
+                is DataState.Loading -> {
+                    state.value = state.value.copy(progressBarState = dataState.progressBarState)
+                }
+                is DataState.Data -> {
+                    val newUserList = state.value.users.toMutableList()
+                    newUserList.add(dataState.data)
+                    state.value = state.value.copy(users = newUserList)
+                }
+                is DataState.Response -> {
+                    appendToMessageQueue(dataState.uiComponent)
+                }
+            }
+        }.launchIn(viewModelScope)
+    }
+
     private fun showModal(value: Boolean) {
         state.value = state.value.copy(isAddUserModalVisible = value)
     }
 
     private fun deleteUser(id: Long) {
-        // Do something
-        val newUsers = state.value.users.toMutableList()
-        newUsers.removeAll {
-            it.id == id
-        }
-        state.value = state.value.copy(
-            users = newUsers
-        )
+        deleteUser.execute(id).onEach { dataState ->
+            when(dataState) {
+                is DataState.Loading -> {
+                    state.value = state.value.copy(progressBarState = dataState.progressBarState)
+                }
+                is DataState.Data -> {
+                    val newUserList = state.value.users.toMutableList()
+                    newUserList.removeAll { it.id == id }
+                    state.value = state.value.copy(users = newUserList)
+                }
+                is DataState.Response -> {
+                    appendToMessageQueue(dataState.uiComponent)
+                }
+            }
+        }.launchIn(viewModelScope)
     }
 
     private fun deleteUserConfirmModal(id: Long) {
