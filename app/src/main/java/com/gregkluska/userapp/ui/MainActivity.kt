@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
                 onRemoveHeadFromQueue = { viewModel.onTriggerEvent(UserListEvent.OnRemoveHeadFromQueue) }
             ) {
                 UserList(
-                    users = viewModel.state.value.users,
+                    state = viewModel.state.value,
                     event = viewModel::onTriggerEvent,
                     scaffoldState = scaffoldState
                 )

@@ -8,5 +8,6 @@ import java.util.*
 data class UserListState(
     val progressBarState: ProgressBarState = ProgressBarState.Idle,
     val users: List<User> = listOf(),
+    val isAddUserModalVisible: Boolean = false,
     val messageQueue: Queue<UIComponent> = ArrayDeque(mutableListOf())
 )

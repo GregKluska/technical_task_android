@@ -37,10 +37,15 @@ constructor(
             is UserListEvent.AddUser -> TODO()
             is UserListEvent.DeleteUser -> deleteUser(event.id)
             UserListEvent.GetUsers -> getUsers()
-            UserListEvent.OpenModal -> TODO()
+            UserListEvent.OpenModal -> showModal(true)
             UserListEvent.OnRemoveHeadFromQueue -> removeHeadMessage()
             is UserListEvent.LongPress -> deleteUserConfirmModal(event.id)
+            UserListEvent.HideModal -> showModal(false)
         }
+    }
+
+    private fun showModal(value: Boolean) {
+        state.value = state.value.copy(isAddUserModalVisible = value)
     }
 
     private fun deleteUser(id: Long) {

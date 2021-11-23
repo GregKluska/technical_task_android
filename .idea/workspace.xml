@@ -12,17 +12,23 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7db33401-cb5a-483e-9a2f-833cddb0254f" name="Default Changelist" comment="Add other actions to UI">
+    <list default="true" id="7db33401-cb5a-483e-9a2f-833cddb0254f" name="Default Changelist" comment="Add Confirm Dialog and Delete action">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/components/AddUserDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/components/DropdownField.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/util/BorderModifier.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/util/EmailValidate.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/MainViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/components/GenericDialog.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/theme/Theme.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/theme/Theme.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/userlist/UserList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/userlist/UserList.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/state/UIComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/state/UIComponent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/userlist/UserListEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/userlist/UserListEvent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/userlist/UserListState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/userlist/UserListState.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637625256876</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add Confirm Dialog and Delete action">
+      <created>1637626722115</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1637626722115</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,6 +266,7 @@
     <MESSAGE value="Add UI, state, events and other MVI things" />
     <MESSAGE value="Add scaffold, topbar" />
     <MESSAGE value="Add other actions to UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add other actions to UI" />
+    <MESSAGE value="Add Confirm Dialog and Delete action" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Confirm Dialog and Delete action" />
   </component>
 </project>
