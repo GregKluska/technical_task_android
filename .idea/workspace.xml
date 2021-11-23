@@ -13,17 +13,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7db33401-cb5a-483e-9a2f-833cddb0254f" name="Default Changelist" comment="Add other use cases and integrate them with ui">
-      <change afterPath="$PROJECT_DIR$/domain/src/test/java/com/gregkluska/domain/NetworkDataSourceFake.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/test/java/com/gregkluska/domain/interactors/AddUserTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/test/java/com/gregkluska/domain/interactors/DeleteUserTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/test/java/com/gregkluska/domain/interactors/GetUsersTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/test/java/com/gregkluska/domain/util.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/util/ErrorMessage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasource/src/test/java/com/gregkluska/datasource/NetworkDataSourceTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasource/src/test/java/com/gregkluska/datasource/UserServiceFake.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasource/src/test/java/com/gregkluska/datasource/util.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/domain/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/ResponseException.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasource/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/datasource/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/NetworkDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/NetworkDataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/gregkluska/domain/NetworkDataSourceFake.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/gregkluska/domain/NetworkDataSourceFake.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/gregkluska/domain/interactors/AddUserTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/gregkluska/domain/interactors/AddUserTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/gregkluska/domain/interactors/DeleteUserTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/gregkluska/domain/interactors/DeleteUserTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/gregkluska/domain/interactors/GetUsersTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/gregkluska/domain/interactors/GetUsersTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/gregkluska/domain/util.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/gregkluska/domain/util.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +58,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Interface" />
-        <option value="Kotlin Object" />
         <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Object" />
       </list>
     </option>
   </component>
@@ -81,10 +87,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/theme" />
-    <property name="project.structure.last.edited" value="SDK Location" />
+    <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="build.tools" />
   </component>
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Properties" />
@@ -108,7 +114,7 @@
       <recent name="com.gregkluska.userapp.ui" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'User_App.domain'">
+  <component name="RunManager" selected="Gradle.Tests in 'com.gregkluska.datasource'">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="User_App.app" />
       <option name="DEPLOY" value="true" />
@@ -165,18 +171,19 @@
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="AddUserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="NetworkDataSourceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.gregkluska.domain.interactors.AddUserTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.gregkluska.datasource.NetworkDataSourceTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":domain:test" />
+            <option value=":datasource:cleanTestDebugUnitTest" />
+            <option value=":datasource:testDebugUnitTest" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -186,18 +193,19 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="DeleteUserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="NetworkDataSourceTest.add user error response" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.gregkluska.domain.interactors.DeleteUserTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.gregkluska.datasource.NetworkDataSourceTest.add user error response&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":domain:test" />
+            <option value=":datasource:cleanTestDebugUnitTest" />
+            <option value=":datasource:testDebugUnitTest" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -207,18 +215,19 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GetUsersTest.getUsers receive error response" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="NetworkDataSourceTest.add user twice (the same email) and expect to throw" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.gregkluska.domain.interactors.GetUsersTest.getUsers receive error response&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.gregkluska.datasource.NetworkDataSourceTest.add user twice (the same email) and expect to throw&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":domain:test" />
+            <option value=":datasource:cleanTestDebugUnitTest" />
+            <option value=":datasource:testDebugUnitTest" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -228,18 +237,19 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GetUsersTest.getUsers returns a list of users" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'com.gregkluska.datasource'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.gregkluska.domain.interactors.GetUsersTest.getUsers returns a list of users&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.gregkluska.datasource.*&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":domain:test" />
+            <option value=":datasource:cleanTestDebugUnitTest" />
+            <option value=":datasource:testDebugUnitTest" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -249,12 +259,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'User_App.domain'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'com.gregkluska.domain'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests *" />
+        <option name="scriptParameters" value="--tests &quot;com.gregkluska.domain.*&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -272,11 +282,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'User_App.domain'" />
-        <item itemvalue="Gradle.DeleteUserTest" />
-        <item itemvalue="Gradle.AddUserTest" />
-        <item itemvalue="Gradle.GetUsersTest.getUsers receive error response" />
-        <item itemvalue="Gradle.GetUsersTest.getUsers returns a list of users" />
+        <item itemvalue="Gradle.Tests in 'com.gregkluska.datasource'" />
+        <item itemvalue="Gradle.Tests in 'com.gregkluska.domain'" />
+        <item itemvalue="Gradle.NetworkDataSourceTest" />
+        <item itemvalue="Gradle.NetworkDataSourceTest.add user error response" />
+        <item itemvalue="Gradle.NetworkDataSourceTest.add user twice (the same email) and expect to throw" />
       </list>
     </recent_temporary>
   </component>
@@ -380,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637634558008</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add unit tests to the domain module">
+      <created>1637694255526</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1637694255526</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -407,9 +424,12 @@
     <MESSAGE value="Add AddUserDialog" />
     <MESSAGE value="Add Token Support" />
     <MESSAGE value="Add other use cases and integrate them with ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add other use cases and integrate them with ui" />
+    <MESSAGE value="Add unit tests to the domain module" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add unit tests to the domain module" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/User_App$Tests_in__com_gregkluska_datasource_.ic" NAME="Tests in 'com.gregkluska.datasource' Coverage Results" MODIFIED="1637700922904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/User_App$Tests_in__com_gregkluska_domain_.ic" NAME="Tests in 'com.gregkluska.domain' Coverage Results" MODIFIED="1637700797044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/User_App$Tests_in__User_App_domain_.ic" NAME="Tests in 'User_App.domain' Coverage Results" MODIFIED="1637693682957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

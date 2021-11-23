@@ -2,7 +2,7 @@ package com.gregkluska.domain.interactors
 
 import com.gregkluska.domain.EXCEPTION_USER_LIST
 import com.gregkluska.domain.NetworkDataSourceFake
-import com.gregkluska.domain.Response
+import com.gregkluska.domain.ResponseType
 import com.gregkluska.domain.model.User
 import com.gregkluska.domain.state.DataState
 import com.gregkluska.domain.state.ProgressBarState
@@ -10,7 +10,6 @@ import com.gregkluska.domain.state.UIComponent
 import com.gregkluska.domain.users
 import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.runBlocking
-import org.jetbrains.annotations.TestOnly
 import org.junit.Test
 
 class GetUsersTest {
@@ -20,7 +19,7 @@ class GetUsersTest {
 
     @Test
     fun `getUsers returns a list of users`() = runBlocking {
-        val networkDataSource = NetworkDataSourceFake( response = Response.Good )
+        val networkDataSource = NetworkDataSourceFake( responseType = ResponseType.Good )
 
         getUsers = GetUsers(networkDataSource)
 
@@ -39,7 +38,7 @@ class GetUsersTest {
 
     @Test
     fun `getUsers receive error response`() = runBlocking {
-        val networkDataSource = NetworkDataSourceFake( response = Response.Error )
+        val networkDataSource = NetworkDataSourceFake( responseType = ResponseType.Error )
 
         getUsers = GetUsers(networkDataSource)
 

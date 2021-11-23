@@ -1,6 +1,7 @@
 package com.gregkluska.datasource
 
 import com.gregkluska.datasource.model.toUser
+import com.gregkluska.datasource.util.ErrorMessage
 import com.gregkluska.domain.INetworkDataSource
 import com.gregkluska.domain.model.User
 
@@ -30,16 +31,16 @@ class NetworkDataSource(
 
         when {
             response.code() == 201 -> {
-                return response.body()?.data?.toUser() ?: throw Exception("Unknown error")
+                return response.body()?.data?.toUser() ?: throw Exception(ErrorMessage.UNABLE_TO_ADD)
             }
             response.code() == 401 -> {
-                throw Exception("Unable to add user. Authentication failed")
+                throw Exception(ErrorMessage.AUTH_ERROR)
             }
             response.code() == 422 -> {
-                throw Exception("Unable to add user. The email is already used.")
+                throw Exception(ErrorMessage.EMAIL_IN_USE)
             }
             else -> {
-                throw Exception("Unable to add user")
+                throw Exception(ErrorMessage.UNABLE_TO_ADD)
             }
         }
     }
@@ -49,11 +50,11 @@ class NetworkDataSource(
 
         when {
             response.code() == 401 -> {
-                throw Exception("Unable to delete. Authentication failed")
+                throw Exception(ErrorMessage.AUTH_ERROR)
             }
             response.code() == 204 -> {}
             else -> {
-                throw Exception("Unable to delete user")
+                throw Exception(ErrorMessage.UNABLE_TO_DELETE)
             }
         }
 

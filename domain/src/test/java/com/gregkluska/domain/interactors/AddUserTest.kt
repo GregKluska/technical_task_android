@@ -15,8 +15,8 @@ class AddUserTest {
     private lateinit var addUser: AddUser
 
     @Test
-    fun `getUsers returns a list of users`() = runBlocking {
-        val networkDataSource = NetworkDataSourceFake( response = Response.Good )
+    fun `addUser returns a list of users`() = runBlocking {
+        val networkDataSource = NetworkDataSourceFake( responseType = ResponseType.Good )
 
         addUser = AddUser(networkDataSource)
 
@@ -37,8 +37,8 @@ class AddUserTest {
     }
 
     @Test
-    fun `getUsers receive error response`() = runBlocking {
-        val networkDataSource = NetworkDataSourceFake( response = Response.Error )
+    fun `addUser receive error response`() = runBlocking {
+        val networkDataSource = NetworkDataSourceFake( responseType = ResponseType.Error )
 
         addUser = AddUser(networkDataSource)
 

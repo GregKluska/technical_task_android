@@ -15,7 +15,7 @@ val users = listOf(
     User(10, "Carolyn Ford", "carolyn.ford@email.com", "female", "active"),
 )
 
-enum class Response { Good, Error }
+enum class ResponseType { Good, Error }
 
 const val EXCEPTION_USER_LIST = "UserList"
 const val EXCEPTION_USER_ADD = "UserAdd"

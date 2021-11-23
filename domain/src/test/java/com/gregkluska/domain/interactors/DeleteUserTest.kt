@@ -16,7 +16,7 @@ class DeleteUserTest {
 
     @Test
     fun `delete user should return data response`() = runBlocking {
-        val networkDataSource = NetworkDataSourceFake( response = Response.Good )
+        val networkDataSource = NetworkDataSourceFake( responseType = ResponseType.Good )
 
         deleteUser = DeleteUser(networkDataSource)
 
@@ -34,7 +34,7 @@ class DeleteUserTest {
 
     @Test
     fun `delete user, throws exception`() = runBlocking {
-        val networkDataSource = NetworkDataSourceFake( response = Response.Error )
+        val networkDataSource = NetworkDataSourceFake( responseType = ResponseType.Error )
 
         deleteUser = DeleteUser(networkDataSource)
 
@@ -53,7 +53,7 @@ class DeleteUserTest {
 
     @Test
     fun `delete user, then delete it again, should throw`() = runBlocking {
-        val networkDataSource = NetworkDataSourceFake( response = Response.Good )
+        val networkDataSource = NetworkDataSourceFake( responseType = ResponseType.Good )
 
         deleteUser = DeleteUser(networkDataSource)
 
