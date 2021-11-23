@@ -63,9 +63,9 @@ constructor(
         appendToMessageQueue(
             UIComponent.ConfirmDialog(
                 title = "Are you sure?",
-                description = "Do you want to delete this user?",
-                positiveLabel = "Yes",
-                negativeLabel = "No",
+                description = "Are you sure you want to remove this user?",
+                positiveLabel = "OK",
+                negativeLabel = "Cancel",
                 positiveAction = { onTriggerEvent(UserListEvent.DeleteUser(id)) }
             )
         )
