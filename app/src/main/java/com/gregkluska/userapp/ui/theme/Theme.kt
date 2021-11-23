@@ -8,14 +8,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.stringResource
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.gregkluska.domain.state.ProgressBarState
-import com.gregkluska.userapp.R
+import com.gregkluska.domain.state.UIComponent
 import com.gregkluska.userapp.ui.components.CircularIndeterminateProgressBar
-import com.gregkluska.userapp.ui.components.GenericDialog
-import com.gregkluska.userapp.ui.components.GenericDialogInfo
 import java.util.*
 
 private val DarkColorPalette = darkColors(
@@ -43,11 +38,16 @@ private val LightColorPalette = lightColors(
 fun AppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     progressBarState: ProgressBarState,
-    dialogQueue: Queue<GenericDialogInfo>? = null,
+    dialogQueue: Queue<UIComponent> = ArrayDeque(mutableListOf()),
+    onRemoveHeadFromQueue: () -> Unit,
     content: @Composable () -> Unit,
 ) {
     MaterialTheme(
-        colors = if (darkTheme) { DarkColorPalette } else { LightColorPalette },
+        colors = if (darkTheme) {
+            DarkColorPalette
+        } else {
+            LightColorPalette
+        },
         typography = Typography,
         shapes = Shapes
     ) {
@@ -60,12 +60,13 @@ fun AppTheme(
                 content()
             }
 
-            if(progressBarState == ProgressBarState.Loading) {
+            if (progressBarState == ProgressBarState.Loading) {
                 CircularIndeterminateProgressBar()
             }
 
             ProcessDialogQueue(
                 dialogQueue = dialogQueue,
+                onRemoveHeadFromQueue = onRemoveHeadFromQueue
             )
         }
     }
@@ -73,15 +74,51 @@ fun AppTheme(
 
 @Composable
 fun ProcessDialogQueue(
-    dialogQueue: Queue<GenericDialogInfo>?,
+    dialogQueue: Queue<UIComponent>,
+    onRemoveHeadFromQueue: () -> Unit
 ) {
-    dialogQueue?.peek()?.let { dialogInfo ->
-        GenericDialog(
-            onDismiss = dialogInfo.onDismiss,
-            title = dialogInfo.title,
-            description = dialogInfo.description,
-            positiveAction = dialogInfo.positiveAction,
-            negativeAction = dialogInfo.negativeAction
-        )
+    if(dialogQueue.isNotEmpty()) {
+        dialogQueue.peek()?.let { uiComponent ->
+            when (uiComponent) {
+                is UIComponent.Dialog -> {
+                    AlertDialog(
+                        onDismissRequest = {onRemoveHeadFromQueue()},
+                        title = { Text(uiComponent.title) },
+                        text = { Text(uiComponent.description) },
+                        confirmButton = {
+                            TextButton(
+                                onClick = { onRemoveHeadFromQueue() },
+                                content = { Text("OK") }
+                            )
+                        }
+
+                    )
+                }
+                is UIComponent.ConfirmDialog -> {
+                    AlertDialog(
+                        onDismissRequest = {
+                            onRemoveHeadFromQueue()
+                        },
+                        title = { Text(uiComponent.title) },
+                        text = { Text(uiComponent.description) },
+                        confirmButton = {
+                            TextButton(
+                                onClick = {
+                                    uiComponent.positiveAction()
+                                    onRemoveHeadFromQueue()
+                                },
+                                content = { Text(uiComponent.positiveLabel) }
+                            )
+                        },
+                        dismissButton = {
+                            TextButton(
+                                onClick = { onRemoveHeadFromQueue() },
+                                content = { Text(uiComponent.negativeLabel) }
+                            )
+                        }
+                    )
+                }
+            }
+        }
     }
 }

@@ -35,12 +35,35 @@ constructor(
     fun onTriggerEvent(event: UserListEvent) {
         when(event) {
             is UserListEvent.AddUser -> TODO()
-            is UserListEvent.DeleteUser -> TODO()
+            is UserListEvent.DeleteUser -> deleteUser(event.id)
             UserListEvent.GetUsers -> getUsers()
             UserListEvent.OpenModal -> TODO()
             UserListEvent.OnRemoveHeadFromQueue -> removeHeadMessage()
-            is UserListEvent.LongPress -> TODO()
+            is UserListEvent.LongPress -> deleteUserConfirmModal(event.id)
         }
+    }
+
+    private fun deleteUser(id: Long) {
+        // Do something
+        val newUsers = state.value.users.toMutableList()
+        newUsers.removeAll {
+            it.id == id
+        }
+        state.value = state.value.copy(
+            users = newUsers
+        )
+    }
+
+    private fun deleteUserConfirmModal(id: Long) {
+        appendToMessageQueue(
+            UIComponent.ConfirmDialog(
+                title = "Are you sure?",
+                description = "Do you want to delete this user?",
+                positiveLabel = "Yes",
+                negativeLabel = "No",
+                positiveAction = { onTriggerEvent(UserListEvent.DeleteUser(id)) }
+            )
+        )
     }
 
     private fun getUsers() {

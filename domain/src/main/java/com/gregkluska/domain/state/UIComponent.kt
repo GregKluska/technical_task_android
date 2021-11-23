@@ -7,4 +7,11 @@ sealed class UIComponent{
         val description: String,
     ): UIComponent()
 
+    data class ConfirmDialog(
+        val title: String,
+        val description: String,
+        val positiveLabel: String,
+        val negativeLabel: String,
+        val positiveAction: () -> Unit,
+    ): UIComponent()
 }
