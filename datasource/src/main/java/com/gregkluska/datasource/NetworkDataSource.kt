@@ -1,7 +1,6 @@
 package com.gregkluska.datasource
 
 import com.gregkluska.datasource.model.toUser
-import com.gregkluska.datasource.model.toUserDto
 import com.gregkluska.domain.INetworkDataSource
 import com.gregkluska.domain.model.User
 
@@ -33,6 +32,9 @@ class NetworkDataSource(
             response.code() == 201 -> {
                 return response.body()?.data?.toUser() ?: throw Exception("Unknown error")
             }
+            response.code() == 401 -> {
+                throw Exception("Unable to add user. Authentication failed")
+            }
             response.code() == 422 -> {
                 throw Exception("Unable to add user. The email is already used.")
             }
@@ -45,7 +47,16 @@ class NetworkDataSource(
     override suspend fun deleteUser(id: Long) {
         val response = userService.deleteUser(id)
 
-        if(response.code() != 204) throw Exception("Unable to delete user")
+        when {
+            response.code() == 401 -> {
+                throw Exception("Unable to delete. Authentication failed")
+            }
+            response.code() == 204 -> {}
+            else -> {
+                throw Exception("Unable to delete user")
+            }
+        }
+
     }
 
 

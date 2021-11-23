@@ -12,18 +12,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7db33401-cb5a-483e-9a2f-833cddb0254f" name="Default Changelist" comment="Add Token Support">
+    <list default="true" id="7db33401-cb5a-483e-9a2f-833cddb0254f" name="Default Changelist" comment="Add other use cases and integrate them with ui">
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/di/InteractorsModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/di/InteractorsModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gregkluska/userapp/ui/MainViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/NetworkDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/NetworkDataSource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/UserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/datasource/src/main/java/com/gregkluska/datasource/UserService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/INetworkDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/INetworkDataSource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/interactors/AddUser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/interactors/AddUser.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/interactors/DeleteUser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/gregkluska/domain/interactors/DeleteUser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637632531391</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add other use cases and integrate them with ui">
+      <created>1637634300494</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1637634300494</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,6 +279,7 @@
     <MESSAGE value="Add Confirm Dialog and Delete action" />
     <MESSAGE value="Add AddUserDialog" />
     <MESSAGE value="Add Token Support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Token Support" />
+    <MESSAGE value="Add other use cases and integrate them with ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add other use cases and integrate them with ui" />
   </component>
 </project>
